@@ -17,6 +17,25 @@ ska inte skapa en sql-databas, utan använd som sagt olika datastrukturer och la
 # Steg 1: Skapa klass med dessa attributer
 # Steg 2: Lagra objekt i valfri datatyp
 # Steg 3: Skriv lagrade objekt till txt-fil
+'''import json
+
+games = {'Title' : input(''), 'Amount of players' : input(''), 'Playtime' : input(''), 'Recommended Age' : input('')}
+json = json.dumps(games)
+f = open('games.json', 'w')
+f.write(json)
+f.close()
+
+print(json)'''
+title = input("Title: ")
+playerCount = input("Player count: ")
+timeLimit = input("Time Limit: ")
+
+f = open("stored.txt", "a")
+f.write(title + ' = {' + '\n')
+f.write(f'\t"Title": "{title}",' + '\n')
+f.write(f'\t"Player Count": "{playerCount}",' + '\n')
+f.write(f'\t"Time Limit": "{timeLimit}"' + '\n}\n\n')
+f.close()
 
 
 ''' Del 2 - Inmatning

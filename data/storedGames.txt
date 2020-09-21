@@ -1,0 +1,7 @@
+monopoly = {
+	"Title": "monopoly",
+	"Player Count": "5",
+	"Time Limit": "15",
+	"Recommended age": "14"
+}
+
