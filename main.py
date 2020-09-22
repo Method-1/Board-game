@@ -8,5 +8,8 @@ while input is not "":
     age = int(input("Recommended age: "))
     thegame = Game(title,players,playtime,age)
     thegame.save(title, players, playtime, age, "storedGames")
-    
+    thegame.read("storedGames")
+
+
+
 

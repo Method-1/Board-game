@@ -1,7 +1,14 @@
-monopoly = {
-	"Title": "monopoly",
-	"Player Count": "5",
-	"Time Limit": "15",
+Jumanji = {
+	"Title": "Jumanji",
+	"Player Count": "14",
+	"Time Limit": "50",
 	"Recommended age": "14"
+}
+
+Monopoly = {
+	"Title": "Monopoly",
+	"Player Count": "15",
+	"Time Limit": "25",
+	"Recommended age": "20"
 }
 
