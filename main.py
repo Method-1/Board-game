@@ -1,5 +1,9 @@
 from gameClass import Game
 
+my_file = open(r"C:\Users\adiab\gits\Board-game\data\storedGames.txt", "r")
+content_list = my_file.readlines()
+print(content_list[0])
+
 # Create a menu for the user
 while input is not "":
     title = input("Title: ")
@@ -13,3 +17,5 @@ while input is not "":
 
 
 
+def choices():
+    print("\n Select between following alternatives")
