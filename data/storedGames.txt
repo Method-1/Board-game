@@ -1,3 +1,2 @@
-{'Title': 'Monopoly', 'Player Count': 5, 'Time Limit': 50, 'Recommended age': 14}
-{'Title': 'Jumanji', 'Player Count': 4, 'Time Limit': 25, 'Recommended age': 13}
-{'Title': 'Fia med knuff', 'Player Count': 4, 'Time Limit': 25, 'Recommended age': 20}
+{'Title': 'Monopoly', 'Player Count': 2, 'Time Limit': 60, 'Recommended age': 10}
+{'Title': 'Jumanji', 'Player Count': 4, 'Time Limit': 120, 'Recommended age': 18}
