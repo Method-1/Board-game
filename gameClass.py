@@ -1,3 +1,5 @@
+import json
+
 class Game:
     def __init__(self, title, players, playtime, age):
         self.title = title
@@ -9,12 +11,13 @@ class Game:
 
     def save(self, title, players, playtime, age, filename):
         try:
-            import json
             my_dict = {"Title" : title, "Player Count" : players, "Time Limit" : playtime, "Recommended age" : age}
-            #my_dict2 = {"Game" : []}
-            #my_dict2["Game"].append(my_dict)
-            with open("data"+"\\"+filename+".json", "a") as fp:
-                json.dump(my_dict, fp, indent=4)
+            with open("data/"+filename+".json", "r+") as fp:
+                loaded_file = json.load(fp)
+                loaded_file["Game"].append(my_dict)
+
+            with open("data/"+filename+".json", "w") as pf:
+                json.dump(loaded_file, pf, indent = 4)
         except Exception as e:
             print(e)
 
@@ -25,18 +28,13 @@ class Archive:
         self.title = title
         self.game_list = []
     
-    def read(self, filename):
+    def printGames(self, filename):
         try:
-            import json
-            with open("data"+"\\"+filename+".json", "r") as fp:
+            
+            with open("data/"+filename+".json", "r") as fp:
                 data = json.load(fp)
                 print(data)
 
-            #f = open("data"+"\\"+filename+".txt", "r")
-            #lines = f.readlines()
-            #for x in lines:
-                #print(x)
-                #f.close()
         except Exception as e:
             print(e)
 
@@ -44,7 +42,18 @@ class Archive:
         new_game = Game(title, players, playtime, age)
         new_game.save(title, players, playtime, age, "storedGames")
         self.game_list.append(new_game)
-    
-    def gameList(self):
-        for game in self.game_list:
-            print(f"Title: {game.title}, Player count: {game.players}, Time limit: {game.playtime}, Recommended age: {game.age}")
+
+    def create_json(self, filename):
+        
+        my_dict = {"Game" : []}
+        with open("data/"+filename+".json", "w") as fp:
+                json.dump(my_dict, fp, indent=4)
+
+        
+    def read(self, filename):
+        try:
+            with open("data/"+filename+".json", "r") as fp:
+                data = json.load(fp)
+                return data
+        except Exception as e:
+            print(e)
