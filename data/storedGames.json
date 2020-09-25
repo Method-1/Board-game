@@ -11,6 +11,12 @@
             "Player Count": 4,
             "Time Limit": 60,
             "Recommended age": 10
+        },
+        {
+            "Title": "Fia med knuff",
+            "Player Count": 10,
+            "Time Limit": 120,
+            "Recommended age": 14
         }
     ]
 }
