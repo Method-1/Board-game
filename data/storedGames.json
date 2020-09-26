@@ -17,6 +17,12 @@
             "Player Count": 10,
             "Time Limit": 120,
             "Recommended age": 14
+        },
+        {
+            "Title": "H\u00f6ps",
+            "Player Count": 2,
+            "Time Limit": 60,
+            "Recommended age": 27
         }
     ]
 }

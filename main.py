@@ -28,7 +28,7 @@ def menu(archive):
             my_list = data["Game"]
             for item in my_list:
                 if item["Title"] == title:
-                    print("\nThis game already exists in the archive!\n Press any key to go back to the menu!")
+                    print("\nThis game already exists in the archive!\nPress any key to go back to the menu!")
                     back_to_menu = input("")
                     if back_to_menu == "":
                         #Clearing the screen with function cls
@@ -41,7 +41,37 @@ def menu(archive):
             age = int(input("Recommended age: "))
             archive.add_game(title, players, playtime, age)
         if choice == 3:
-            archive.printGames("storedGames")
+            cls()
+            games = archive.read("storedGames")
+            game_list = games["Game"]
+            # prints out all games that are stored in the archive
+            print("These are the games we have in the archive! \n")
+            for i in game_list:
+                print(i)
+            # print out a message that let's the user go back to the menu
+            print("\nPress any key to get back to the menu!")
+            back_to_menu = input("")
+            if back_to_menu == "":
+                cls()
+                menu(Game_Archive)
+        # Building code that enables the user to edit a game in the archive, not finished.
+        if choice == 5:
+            cls()
+            games = archive.read("storedGames")
+            game_list = games["Game"]
+            print("These are the games we have in the archive, if you want to edit a game, type the title of it.\n")
+            for i in game_list:
+                print(i["Title"])
+            
+            title = input("Title of game you want to edit: ")
+            
+                #if item["Title"] == title:
+                     
+            #if title == 
+            
+            
+            
+
 
         #thegame = Game(title,players,playtime,age)
         #thegame.save(title, players, playtime, age, "storedGames")

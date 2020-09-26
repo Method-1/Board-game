@@ -20,6 +20,18 @@ class Game:
                 json.dump(loaded_file, pf, indent = 4)
         except Exception as e:
             print(e)
+    
+    def set_title(self, title):
+        self.title = title
+    
+    def set_players(self, players):
+        self.players = players
+
+    def set_playtime(self, playtime):
+        self.playtime = playtime
+    
+    def set_age(self, age):
+        self.age = age
 
 
 
