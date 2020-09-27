@@ -63,10 +63,11 @@ def menu(archive):
             cls()
             games = archive.read("storedGames")
             game_list = games["Game"]
-            remove_game = int(input("Enter the title of the game you want to remove: "))
+            remove_game = input("Enter the title of the game you want to remove: ")
             for i in range(len(game_list)):
-                if game_list[i]["Time Limit"] == remove_game:
+                if game_list[i]["Title"] == remove_game:
                     print(game_list[i])
+            backMenu()
                     
 
         # Building code that enables the user to edit a game in the archive. (not finished).
