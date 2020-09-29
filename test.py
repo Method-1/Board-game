@@ -20,7 +20,7 @@ dicty3["Game"].append(my_dict2)
 dic = dicty3["Game"]
 for item in dic:
     if item["Title"] == title:
-        print("Hej adi")
+        print(item)
     #print (item["Title"])
 #print(dicty3["Game"][0].values())
 #print(dicty3["Game"][3]["c"])

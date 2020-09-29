@@ -21,17 +21,8 @@ class Game:
         except Exception as e:
             print(e)
     
-    def set_title(self, title):
-        self.title = title
-    
-    def set_players(self, players):
-        self.players = players
 
-    def set_playtime(self, playtime):
-        self.playtime = playtime
-    
-    def set_age(self, age):
-        self.age = age
+
 
 
 
@@ -40,15 +31,37 @@ class Archive:
         self.title = title
         self.game_list = []
     
-    def printGames(self, filename):
-        try:
-            
-            with open("data/"+filename+".json", "r") as fp:
-                data = json.load(fp)
-                print(data)
+    def menu_alternatives(self):
+        print("\n Welcome to the ||Boardgame Archive||")
+        print("\n Select between following alternatives:\n 1. Add a game in to the archive \n 2. Print out list of games in archive \n 3. Delete a game from the archive \n 4. Edit a game from the archive \n 5. Search for games with certain attributes \n 6. Create new file that stores games (overwrites the old one) \n 7. Exit")
 
+    def delete_game(self, datalist, filename):
+        self.datalist = datalist
+        game_list = datalist["Game"]
+
+        y = 0
+        for i in game_list:
+            print(y,i)
+            y += 1
+        
+        try:
+            remove_game = int(input("Choose game you want to remove: "))
+            del game_list[remove_game]
+            print("The game has been removed!")
         except Exception as e:
             print(e)
+            print("Wrong input!")
+            
+            
+        with open("data/"+filename+".json", "w") as pf:
+            json.dump(datalist, pf, indent = 4)
+    
+    def edit_game(self, datalist, filename):
+        
+        with open("data/"+filename+".json", "w") as pf:
+            json.dump(datalist, pf, indent = 4)
+        
+
 
     def add_game(self, title, players, playtime, age):
         new_game = Game(title, players, playtime, age)
@@ -69,3 +82,20 @@ class Archive:
                 return data
         except Exception as e:
             print(e)
+    
+    def search(self, datalist, key, value, filename):
+        self.datalist = datalist
+        game_list = datalist["Game"]
+        for item in game_list:
+            if item[key] == value:
+                print(item)
+                
+
+
+    def search_two(self, datalist, key, value, filename):
+        self.datalist = datalist
+        game_list = datalist["Game"]
+        for item in game_list:
+            if item[key] == value:
+                print(item)
+                

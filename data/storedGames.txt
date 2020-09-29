@@ -1,2 +1,0 @@
-{'Title': 'Monopoly', 'Player Count': 2, 'Time Limit': 60, 'Recommended age': 10}
-{'Title': 'Jumanji', 'Player Count': 4, 'Time Limit': 120, 'Recommended age': 18}

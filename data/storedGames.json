@@ -1,16 +1,28 @@
 {
     "Game": [
         {
-            "Title": "Monopoly",
+            "Title": "game of thrones",
             "Player Count": 5,
+            "Time Limit": 200,
+            "Recommended age": 18
+        },
+        {
+            "Title": "monopoly",
+            "Player Count": 10,
             "Time Limit": 60,
             "Recommended age": 10
         },
         {
-            "Title": "Jumanji",
-            "Player Count": 5,
+            "Title": "bajs",
+            "Player Count": 2,
             "Time Limit": 120,
             "Recommended age": 18
+        },
+        {
+            "Title": "hunger games",
+            "Player Count": 40,
+            "Time Limit": 1200,
+            "Recommended age": 12
         }
     ]
 }
