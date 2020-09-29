@@ -33,7 +33,7 @@ class Archive:
     
     def menu_alternatives(self):
         print("\n Welcome to the ||Boardgame Archive||")
-        print("\n Select between following alternatives:\n 1. Add a game in to the archive \n 2. Print out list of games in archive \n 3. Delete a game from the archive \n 4. Edit a game from the archive \n 5. Search for games with certain attributes \n 6. Create new file that stores games (overwrites the old one) \n 7. Exit")
+        print("\n Select between following alternatives:\n 1. Add a game in to the archive \n 2. Print out list of games in archive \n 3. Delete a game from the archive \n 4. Edit a game from the archive \n 5. Search for games with certain attributes \n 6. Overwrite the old file with a new file) \n 7. Exit")
 
     def delete_game(self, datalist, filename):
         self.datalist = datalist
@@ -89,13 +89,6 @@ class Archive:
         for item in game_list:
             if item[key] == value:
                 print(item)
-                
 
-
-    def search_two(self, datalist, key, value, filename):
-        self.datalist = datalist
-        game_list = datalist["Game"]
-        for item in game_list:
-            if item[key] == value:
-                print(item)
-                
+        
+                   

@@ -134,41 +134,55 @@ def menu(archive):
 
                 if filter_choice == 2:
                     cls()
-                    title_choice = input("Title? [y/n]").lower()
-                    title_choice = "Title"
-                    if title_choice == "y":
-                        my_key = "Title"
-                        my_title = input("Enter title name: ").lower()
+                    values = []
+                    values2 = []
+                    print("Filter by any of these criteria")
+                    #ask_user = input("What do you want to search for? (Title, Player Count, Time Limit, Recommended age): ")
+                    #correct_inp = archive.check_input(ask_user)
+                    criteria_1 = int(input("First criteria: 1. Title 2. Player Count 3. Time Limit 4. Recommended age: "))
+                    if criteria_1 == 1:
+                        key1 = "Title"
+                        title_value = input("Type title: ")
+                        values.append(title_value)
+                    if criteria_1 == 2:
+                        key1 = "Player Count"
+                        player_value = int(input("Type number of players: "))
+                        values.append(player_value)
+                    if criteria_1 == 3:
+                        key1 = "Time Limit"
+                        time_value = int(input("Type time limit in minutes: "))
+                        values.append(time_value)
+                    if criteria_1 == 4:
+                        key1 = "Recommended age"
+                        age_value = int(input("Type recommended age: "))
+                        values.append(age_value)
 
 
-                    '''get_choice_title = input("Title? [y/n]").lower()
-                    if get_choice_title == "y":
-                        get_title = input("Search title: ").lower()
-                        title_key = "Title"
-                    elif get_choice_title == "n":
-                        pass
-
-                    get_choice_playerc = input("Player Count? [y/n]").lower()
-                    if get_choice_playerc == "y":
-                        get_playerc = int(input("Search player count: "))
-                        playerc_key = "Player Count"
-                    elif get_choice_playerc == "n":
-                        pass
-
-                    get_choice_timelimit = input("Time limit? [y/n]").lower()
-                    if get_choice_timelimit == "y":
-                        get_timelimit = int(input("Search time limit: "))
-                        timelimit_key = "Time Limit"
-                    elif get_choice_timelimit == "n":
-                        pass
-
-                    get_choice_age = input("Recommended age? [y/n]").lower()
-                    if get_choice_age == "y":
-                        get_age = int(input("Search recommended age: "))
-                        age_key = "Recommended age"
-                    elif get_choice_age == "n":
-                        pass
-                    archive.search_two(games, title_key, playerc_key, get_title, get_playerc, "storedGames")'''
+                    criteria_2 = int(input("Second criteria: 1. Title 2. Player Count 3. Time Limit 4. Recommended age: "))
+                    if criteria_2 == 1:
+                        key2 = "Title"
+                        title_value2 = input("Type title: ")
+                        values2.append(title_value2)
+                    if criteria_2 == 2:
+                        key2 = "Player Count"
+                        player_value2 = int(input("Type number of players: "))
+                        values2.append(player_value2)
+                    if criteria_2 == 3:
+                        key2 = "Time Limit"
+                        time_value2 = int(input("Type time limit in minutes: "))
+                        values2.append(time_value2)
+                    if criteria_2 == 4:
+                        key2 = "Recommended age"
+                        age_value2 = int(input("Type recommended age: "))
+                        values2.append(age_value2)
+                    
+                    if key1 is not key2:
+                        
+                        result = [d for d in game_list if d[key1] in values]
+                        
+                        result2 = [d for d in result if d[key2] in values2]
+                        print(result2)
+  
 
         
             if choice == 6:

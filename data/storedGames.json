@@ -23,6 +23,12 @@
             "Player Count": 40,
             "Time Limit": 1200,
             "Recommended age": 12
+        },
+        {
+            "Title": "jumanji",
+            "Player Count": 5,
+            "Time Limit": 60,
+            "Recommended age": 10
         }
     ]
 }
